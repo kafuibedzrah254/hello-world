@@ -1,1 +1,1 @@
-# hello-world
+My JavaScript crash course
