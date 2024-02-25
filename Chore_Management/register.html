@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="register.css">
+    <title>Chore Management System - Register</title>
+    <script src="https://kit.fontawesome.com/8ad8986480.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <form action="#" method="post" id="registerForm">
+        <input type="text" name="firstName" id="firstName" placeholder="First Name" required>
+        <input type="text" name="lastName" id="lastName" placeholder="Last Name" required>
+        
+        <label for="gender">Gender:</label>
+        <input type="radio" name="gender" id="male" value="0" required>
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="female" value="1" required>
+        <label for="female">Female</label>
+
+        <label for="familyRole">Family Role:</label>
+        <select name="familyRole" id="familyRole" required>
+            <option value="0">Select</option>
+            <option value="1">Father</option>
+            <option value="2">Mother</option>
+            <option value="3">Son</option>
+            <option value="4">Daughter</option>
+        </select>
+
+        <input type="date" name="dob" id="dob" placeholder="Date of Birth" required>
+        <div class="phone">
+            <i class="fa-solid fa-phone"></i>
+            <input type="tel" name="phoneNumber" id="phoneNumber" placeholder="Phone Number" required>
+
+
+        </div>
+        <input type="email" name="email" id="email" placeholder="Email" required>
+        <div class="password-container">
+            <i class="fas fa-lock"></i>
+            <input type="password" name="password" id="password" placeholder="Password" required>
+
+        </div>
+
+        <div class="confirm-container">
+            <i class="fas fa-lock"></i>
+            <input type="password" name="password" id="password2" placeholder="Confirm Password" required>
+
+        </div>
+
+        <button type="submit" name="submit" id="registerBtn">Register</button>
+    </form>
+
+    <p id="loginMessage">Already have an account? <a href="login.html" id="loginLink">Login</a></p>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById("registerForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevents the default form submission
+
+            // Get user input
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+
+            // Basic email validation using a regular expression
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert("Invalid email address. Please enter a valid email.");
+                return;
+            }
+
+            // Basic password validation - minimum length of 8 characters
+            if (password.length < 8) {
+                alert("Password must be at least 8 characters long.");
+                return;
+            }
+
+            // Additional registration logic can be added here
+
+            // If validation passes, you can submit the form or perform other actions
+            alert("Registration successful!");
+        });
+    </script>
+</body>
+</html>

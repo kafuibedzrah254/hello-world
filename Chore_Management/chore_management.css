@@ -1,0 +1,44 @@
+body {
+    font-family: 'Open Sans', sans-serif; /* Use Open Sans font */
+    background-color: turquoise;
+    color: #333;
+    margin: 0;
+}
+
+header {
+    background-color:whitesmoke;
+    color: black;
+    text-align: center;
+    padding: 20px;
+}
+
+.chores-list {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 5px 0;
+    padding: 10px;
+    background-color: #fff;
+}
+
+footer {
+    background-color:whitesmoke;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
