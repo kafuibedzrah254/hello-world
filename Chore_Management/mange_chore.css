@@ -162,3 +162,24 @@
     width: calc(100% -80px);
     padding: 1rem;
 }
+
+
+
+.table {
+        margin-left: 150px;
+        margin-top: 150px;
+        border-collapse: separate;
+        border-spacing: 10px; /* Adjust this value to control the spacing between rows */
+        table-layout: fixed;
+        width: 80%;
+    }
+
+.th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: center;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
